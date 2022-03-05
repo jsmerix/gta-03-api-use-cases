@@ -6,10 +6,13 @@ import sys
 import datetime
 import json
 from api_client import ApiClient
+from dotenv import load_dotenv 
 
-SECUREX_CLIENT_ID = "YOUR_SECUREX_CLIENT_ID"
-SECUREX_CLIENT_PASSWORD = "YOUR_SECUREX_CLIENT_PASSWORD"
-SECUREX_VISIBILITY_HOST_NAME = "YOUR_SECUREX_VISIBILITY_HOST_NAME"
+load_dotenv()
+
+SECUREX_CLIENT_ID = os.environ.get("SECUREX_CLIENT_ID")
+SECUREX_CLIENT_PASSWORD = os.environ.get("SECUREX_CLIENT_PASSWORD")
+SECUREX_VISIBILITY_HOST_NAME = os.environ.get("SECUREX_VISIBILITY_HOST_NAME")
 
 # Filename (including full path) to save cursor of then last processed event item.
 # It creates a new file, if the file does not exist otherwise truncates and over-write existing file.
