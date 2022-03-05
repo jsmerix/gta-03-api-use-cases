@@ -17,7 +17,7 @@ SECUREX_VISIBILITY_HOST_NAME = os.environ.get("SECUREX_VISIBILITY_HOST_NAME")
 # Filename (including full path) to save cursor of then last processed event item.
 # It creates a new file, if the file does not exist otherwise truncates and over-write existing file.
 # Needs read/write access to the folder, e.g. "/home/splunk/events_end_cursor.txt"
-EVENTS_END_CURSOR_FILENAME = "/events_end_cursor.txt"
+EVENTS_END_CURSOR_FILENAME = "events_end_cursor.txt"
 
 DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 CHUNK_SIZE = 1000
